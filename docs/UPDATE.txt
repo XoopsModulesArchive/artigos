@@ -1,0 +1,13 @@
+Updating artigos:
+
+any version to v0.06
+====================
+
+There are no database changes for this update, so it is a simple process:
+
+Simply upload and replace the artigos files on your webserver, log into your
+admin area, go to the system->modules admin page. Scroll down to where artigos
+is listed and click on the "update" icon over to the right, confirm your wish 
+to update and you are done.
+ 
+

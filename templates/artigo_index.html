@@ -1,0 +1,43 @@
+
+<!-- <h4 style="text-align:left;"><{$index_page_title}></h4> -->
+<table border="1" width="100%" cellspacing="1" cellpadding="0" class="outer">
+  <tr>
+    <th><{$category_list_title}></th>
+  </tr>
+
+  <!-- start category loop -->
+  <{foreach item=category from=$categories}>
+  
+  <tr>
+    <td>
+
+      <table border="0" cellspacing="2" width="100%">
+        <tr>
+          <td colspan="3"  class="even">
+            <strong><{$category.cat_name}></strong><br>
+            <span style="font-size: smaller;"><{$category.cat_description}></span>
+          </td>
+        </tr>
+			
+        <!-- start artigo loop -->
+        <{foreach item=artigo from=$category.artigos}>
+        <tr>
+          <td class="odd" width="10"><!-- spacer --></td>
+          <td class="odd">
+            <a href="artigo.php?id=<{$artigo.id}>"><{$artigo.title}></a><br>
+            <span style="font-size: smaller;"><{$artigo.artigo_description}></span>
+          </td>
+          <td class="odd" width="90"><span style="text-align: right;">[<{$artigo.artigo_views}> <{$artigo_views_caption}>]   </span></td>
+        </tr>
+        <{/foreach}>
+        <!-- end artigo loop -->
+      </table>
+
+    </td>
+  </tr>
+  
+  <{/foreach}>
+  <!-- end category loop -->
+  
+</table>
+

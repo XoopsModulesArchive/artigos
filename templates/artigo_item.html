@@ -1,0 +1,55 @@
+
+
+
+<!-- start main artigo loop -->
+<{foreach item=artigo from=$artigos}>
+<table border="0" width="100%" cellspacing="1" cellpadding="0" class="outer">
+  <tr>
+    <th><{$artigo.artigo_title}></th>
+  </tr>
+  <tr>
+    <td class="itemInfo"><span style="font-style: italic; font-size: smaller;"><{$posted_on}> <{$artigo.art_posted_datetime}> (<{$artigo.art_views}> <{$art_reads_cap}>)</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="white"><!-- Change colour (currently "white") to what you want and update template -->
+      <{$artigo.art_artigo_text}>      
+    </td>
+  </tr>
+  <tr>
+    <td height="5"><!-- spacer --></td>
+  </tr>
+  <tr>
+    <td class="itemFoot"></td>    
+  </tr>
+</table>
+<{/foreach}>
+<!-- end main artigo loop -->
+
+<table width="100%">
+  <tr>
+    <td colspan="3" style="text-align: center;">
+      <a href="index.php"><{$index_link_text}></a> 
+      <strong>::</strong> 
+      <a href="print.php?id=<{$artigo_id}>" target="_blank"><{$print_art_link}></a>
+    </td>
+  </tr>
+</table>
+
+<!-- comments code -->
+<div style="text-align: center; padding: 3px; margin: 3px;">
+  <{$commentsnav}>
+  <{$lang_notice}>
+</div>
+
+<div style="margin: 3px; padding: 3px;">
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}>
+  <{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+  <{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+  <{include file="db:system_comments_nest.html"}>
+<{/if}>
+<!-- end comments loop -->
+</div>
+<!-- end comments code -->

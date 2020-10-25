@@ -1,0 +1,73 @@
+artigos History
+
+Key:
+ + Added feature.
+ - Removed.
+ ! Bug fix.
+ o General comment.
+
+ 
+artigos v0.06:
+===============
+ 
+ + Printable version of page added.
+ o Admin Index page cleaned up and updated - text can now be localised in 
+   language/admin.php.
+ o Yet more minor changes.
+ + artigo views caption text localised on index page.
+ + "Posted on" and "reads" localised on main artigo page.
+  
+ 
+artigos v0.05 (not publically released):
+===============
+
+ + Implemented Xoops searching system. The artigo title, description and
+   the actual artigo text will be searched.
+ + French translation added - thanks to Hervé Thouzard.
+ o Several minor changes made.
+ 
+artigos v0.04:
+===============
+
+ o Changed font on admin icon to the same as used on Xoops' icons (bit3).
+ o Added "Pencil" to the logo.
+ o Changed module description to reflect current name.
+ + Implemented comments.
+ + Added category names in artigo listing - due to space limitations, the
+   category ID is shown, but a "tooltip" system is used to show the category
+   name. I have used "AltText" by Brian Gosselin of http://www.scriptasylum.com
+ + Hard-coded artigo background colour to prevent artigo text being "washed
+   out" by theme background colours. The background colour will eventually be a
+   preferences option, but for now it can be changed in the "artigo_item.html"
+   template.
+ 
+artigos v0.03:
+===============
+
+ o Changed Category editor to internal Xoops editor.
+ + Added category "Order" column in list of categories
+ + Changed "main.php" include to accept other language files if they exist.
+ + Added alternating row colours for category listing (in admin).
+ + Added alternating row colours for artigo listing (in admin).
+ ! Made a temporary fix for category listing/selection bug when editing artigos.
+ + artigo list in admin now lists artigos by category, then its weight/order.
+ ! Categories can now be hidden on user listing.
+ + Added category ID column to the artigo listing.
+ + Added width attributes to the artigo listing template, so looks tidier.
+ o Loads of small changes.
+ 
+artigos v0.02:
+===============
+ 
+ o First public release.
+ o Too much to list as still being "put together" - changes will be listed 
+   after this version.
+
+artigos v0.01:
+===============
+
+ This is the fist development version and was never released to the public.
+ This version has too many changes to list here.
+
+
+
